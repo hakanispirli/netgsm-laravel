@@ -1,0 +1,39 @@
+{
+    "name": "hakanispirli/netgsm-laravel",
+    "description": "Laravel 13.x+ package for sending Netgsm normal, scheduled, and OTP SMS messages.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hakan Ispirli"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "illuminate/bus": "^13.0",
+        "illuminate/config": "^13.0",
+        "illuminate/console": "^13.0",
+        "illuminate/contracts": "^13.0",
+        "illuminate/http": "^13.0",
+        "illuminate/queue": "^13.0",
+        "illuminate/support": "^13.0",
+        "psr/log": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "HakanIspirli\\NetgsmLaravel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HakanIspirli\\NetgsmLaravel\\NetgsmServiceProvider"
+            ],
+            "aliases": {
+                "NetgsmSms": "HakanIspirli\\NetgsmLaravel\\Facades\\NetgsmSms"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
